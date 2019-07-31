@@ -1,0 +1,29 @@
+{
+    "name": "Experimental Chrome Extension",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Test some Chrome Extension capabilities.",
+    "icons": {
+      "32": "funnyfox32.png"
+    },
+    "background": {
+      "persistent": false,
+      "scripts": ["background_script.js"]
+    },
+    "commands": {
+        "_execute_browser_action": {
+          "suggested_key": {
+            "windows": "Ctrl+Shift+B",
+            "mac": "Command+Shift+B",
+            "chromeos": "Ctrl+Shift+B",
+            "linux": "Ctrl+Shift+B"
+          }
+        }
+    },
+    "permissions": ["activeTab"],
+    "browser_action": {
+      "default_title": "Click on this to test the browser action.",
+      "default_icon": "funnyfox32.png"
+    },
+    "options_page": "options.html"
+  }
